@@ -24,8 +24,8 @@ A production pipeline that processes the entire corpus of Federal Register docum
 ### 1.2 What we're NOT building
 
 - A RAG/knowledge base for querying FR documents conversationally (wrong tool for structured extraction at scale)
-- A real-time processing system (this is batch/near-batch, triggered daily or on-demand)
-- An economic impact estimation model (that's downstream R/econometric work that consumes the structured dataset this pipeline produces)
+- A real-time processing system (this is batch/near-batch, triggered daily or on-demand)... at least not yet
+- An economic impact estimation model (that's downstream econometric work that consumes the structured dataset this pipeline produces)
 
 ### 1.3 End-state output
 
