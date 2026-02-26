@@ -37,7 +37,7 @@ A set of relational tables (stored as partitioned Parquet on S3, queryable via A
 
 ### 1.4 Downstream analytical use
 
-The structured dataset feeds R-based econometric analysis and Quarto-generated reports for tariff intelligence publications. Understanding the analytical intent shapes extraction priorities:
+The structured dataset feeds R-based econometric analysis and Quarto-generated reports for regulation-related publications. Understanding the analytical intent shapes extraction priorities:
 
 **Primary estimation goal:** Regulation-by-regulation economic impact estimates in dollar terms. For rules with explicit RIAs, the pipeline extracts the agency's own cost/benefit numbers. For rules without RIAs, the pipeline extracts enough structural information (affected industries, entity counts, regulatory instrument type, stringency direction) to support estimation using standard approaches from the regulatory economics literature (cost-per-entity extrapolation, industry-level compliance cost benchmarks, etc.).
 
@@ -74,7 +74,7 @@ The R pipeline accesses the structured data through two paths:
 - **Budget:** Low thousands of dollars for LLM inference, not tens of thousands. This drives the two-tier architecture — Haiku for triage, Sonnet for extraction, agentic only where needed.
 - **AWS region:** us-east-1 (existing infrastructure)
 - **Existing assets:** FR scraper Lambda already running daily with SQLite manifest synced to S3 (see Section 2.2 for details)
-- **Downstream consumer:** R analysis pipeline and Quarto reports for tariff intelligence publications
+- **Downstream consumer:** R analysis pipeline and Quarto reports for regulation-related publications
 
 ### 1.7 Development philosophy: test small, scale later
 
@@ -592,7 +592,7 @@ Documents with "low" or "unable" on `total_cost_annualized`, `is_economically_si
    - This is a NEW table, separate from the scraper's SQLite manifest. The manifest tracks *downloads*; this table tracks *extractions*.
 
 **Prompt development strategy:**
-- Start with 20 manually selected documents covering the hardest cases: a modern final rule with full RIA, a 1960s notice, a presidential proclamation with tariff modifications, a correction, a proposed rule with detailed cost estimates
+- Start with 20 manually selected documents covering the hardest cases: a modern final rule with full RIA, a 1960s notice, a presidential proclamation with modifications, a correction, a proposed rule with detailed cost estimates
 - Test across eras: 1940s, 1970s, 1990s (post-EO 12866), 2010s, 2020s
 - Iterate prompts until field-level accuracy meets threshold on the 20-doc dev set
 - Then run on full 500-doc sample and measure against 50-doc annotated ground truth
