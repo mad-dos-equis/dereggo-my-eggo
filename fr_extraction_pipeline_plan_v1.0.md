@@ -37,7 +37,7 @@ A set of relational tables (stored as partitioned Parquet on S3, queryable via A
 
 ### 1.4 Downstream analytical use
 
-The structured dataset feeds R-based econometric analysis and Quarto-generated reports for regulation-related publications. Understanding the analytical intent shapes extraction priorities:
+The structured dataset feeds econometric analysis and Quarto-generated reports for regulation-related publications. Understanding the analytical intent shapes extraction priorities:
 
 **Primary estimation goal:** Regulation-by-regulation economic impact estimates in dollar terms. For rules with explicit RIAs, the pipeline extracts the agency's own cost/benefit numbers. For rules without RIAs, the pipeline extracts enough structural information (affected industries, entity counts, regulatory instrument type, stringency direction) to support estimation using standard approaches from the regulatory economics literature (cost-per-entity extrapolation, industry-level compliance cost benchmarks, etc.).
 
