@@ -9,7 +9,7 @@
 
 ## 0. How to Use This Document
 
-When starting a new conversation about this project, upload this file and say something like "Here's the FR pipeline plan — I'm working on Phase X" or "Pick up where we left off." This document contains everything needed to understand the project architecture, what's been built, what's in progress, and what decisions have been made and why.
+When starting a new conversation with Claude about this project, upload this file and say something like "Here's the FR pipeline plan — I'm working on Phase X" or "Pick up where we left off." This document contains everything needed to understand the project architecture, what's been built, what's in progress, and what decisions have been made and why.
 
 **Update discipline:** After each working session that produces meaningful progress, ask Claude to generate an updated version of this document reflecting what changed. The STATUS TRACKER in Section 8 is the single source of truth for what's done.
 
