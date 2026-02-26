@@ -52,10 +52,10 @@ The structured dataset feeds econometric analysis and Quarto-generated reports f
 - `regulatory_instruments` — Categorizes the type of regulation (performance standard, technology mandate, reporting requirement, etc.), which is a key covariate in cost estimation models.
 
 **What can be approximate vs. what must be precise:**
-- Document type classification must be precise (>95% accuracy) — it determines which documents enter the estimation sample
+- Document type classification must be precise (>95% accuracy): it determines which documents enter the estimation sample
 - Cost/benefit dollar figures should be within an order of magnitude; exact-to-the-dollar precision is not expected given variation in how agencies report
-- NAICS codes can tolerate some noise — being in the right 3-digit sector is often sufficient for the industry-level analysis
-- Dates (publication, effective) must be exact — they define the temporal structure of the regulatory panel
+- NAICS codes can tolerate some noise: being in the right 3-digit sector is often sufficient for the industry-level analysis
+- Dates (publication, effective) must be exact: they define the temporal structure of the regulatory panel
 
 ### 1.5 R workflow and data access patterns
 
